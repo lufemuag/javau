@@ -14,7 +14,7 @@ localPort = 5000
 externalPort = 80
 
 [workflows]
-runButton = "Build Android"
+runButton = "Build Android App"
 
 [[workflows.workflow]]
 name = "Project"
@@ -46,3 +46,20 @@ args = "chmod +x gradlew"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./gradlew clean assembleDebug"
+
+[[workflows.workflow]]
+name = "Build Android App"
+author = 43381214
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "chmod +x gradlew"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./gradlew clean"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./gradlew build"
