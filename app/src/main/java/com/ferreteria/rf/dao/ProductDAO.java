@@ -109,17 +109,32 @@ public class ProductDAO {
         return result;
     }
 
+    public int getTotalProducts() {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String countQuery = "SELECT COUNT(*) FROM " + DatabaseHelper.TABLE_PRODUCTS;
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int count = 0;
+        if (cursor.moveToFirst()) {
+            count = cursor.getInt(0);
+        }
+        cursor.close();
+        db.close();
+        return count;
+    }
+
+    public int getProductCount() {
+        return getTotalProducts();
+    }
+
     public List<Product> searchProducts(String query) {
         List<Product> products = new ArrayList<>();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-        String searchQuery = "SELECT * FROM " + DatabaseHelper.TABLE_PRODUCTS + 
-                           " WHERE " + DatabaseHelper.COLUMN_PRODUCT_DESCRIPCION + " LIKE ? OR " +
-                           DatabaseHelper.COLUMN_PRODUCT_CODIGO + " LIKE ? OR " +
-                           DatabaseHelper.COLUMN_PRODUCT_CATEGORIA + " LIKE ?";
+        String selection = DatabaseHelper.COLUMN_PRODUCT_CODIGO + " LIKE ? OR " +
+                          DatabaseHelper.COLUMN_PRODUCT_DESCRIPCION + " LIKE ?";
+        String[] selectionArgs = {"%" + query + "%", "%" + query + "%"};
 
-        String searchParam = "%" + query + "%";
-        Cursor cursor = db.rawQuery(searchQuery, new String[]{searchParam, searchParam, searchParam});
+        Cursor cursor = db.query(DatabaseHelper.TABLE_PRODUCTS, null, selection, selectionArgs, null, null, null);
 
         if (cursor.moveToFirst()) {
             do {
@@ -137,21 +152,6 @@ public class ProductDAO {
         cursor.close();
         db.close();
         return products;
-    }
-
-    public int getTotalProducts() {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        String query = "SELECT COUNT(*) FROM " + DatabaseHelper.TABLE_PRODUCTS;
-        Cursor cursor = db.rawQuery(query, null);
-
-        int count = 0;
-        if (cursor.moveToFirst()) {
-            count = cursor.getInt(0);
-        }
-
-        cursor.close();
-        db.close();
-        return count;
     }
 
     public boolean isProductExists(String codigo) {

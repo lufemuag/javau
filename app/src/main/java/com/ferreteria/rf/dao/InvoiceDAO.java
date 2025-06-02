@@ -97,30 +97,7 @@ public class InvoiceDAO {
         return invoice;
     }
 
-    public int updateInvoice(Invoice invoice) {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues values = new ContentValues();
-
-        values.put(DatabaseHelper.COLUMN_INVOICE_NUMERO, invoice.getNumero());
-        values.put(DatabaseHelper.COLUMN_INVOICE_TOTAL, invoice.getTotal());
-        values.put(DatabaseHelper.COLUMN_INVOICE_CLIENT_ID, invoice.getClientId());
-        values.put(DatabaseHelper.COLUMN_INVOICE_ESTADO, invoice.getEstado());
-
-        int result = db.update(DatabaseHelper.TABLE_INVOICES, values, 
-                              DatabaseHelper.COLUMN_INVOICE_ID + " = ?", 
-                              new String[]{String.valueOf(invoice.getId())});
-        db.close();
-        return result;
-    }
-
-    public int deleteInvoice(int id) {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        int result = db.delete(DatabaseHelper.TABLE_INVOICES, 
-                              DatabaseHelper.COLUMN_INVOICE_ID + " = ?", 
-                              new String[]{String.valueOf(id)});
-        db.close();
-        return result;
-    }
+    
 
     public List<Invoice> searchInvoices(String query) {
         List<Invoice> invoices = new ArrayList<>();
@@ -159,18 +136,50 @@ public class InvoiceDAO {
         return invoices;
     }
 
+    
+    public int updateInvoice(Invoice invoice) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(DatabaseHelper.COLUMN_INVOICE_NUMERO, invoice.getNumero());
+        values.put(DatabaseHelper.COLUMN_INVOICE_TOTAL, invoice.getTotal());
+        values.put(DatabaseHelper.COLUMN_INVOICE_CLIENT_ID, invoice.getClientId());
+        values.put(DatabaseHelper.COLUMN_INVOICE_ESTADO, invoice.getEstado());
+
+        int result = db.update(DatabaseHelper.TABLE_INVOICES, values,
+                DatabaseHelper.COLUMN_INVOICE_ID + " = ?",
+                new String[]{String.valueOf(invoice.getId())});
+        db.close();
+        return result;
+    }
+
+    public int deleteInvoice(int id) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        int result = db.delete(DatabaseHelper.TABLE_INVOICES,
+                DatabaseHelper.COLUMN_INVOICE_ID + " = ?",
+                new String[]{String.valueOf(id)});
+        db.close();
+        return result;
+    }
+
     public double getTotalBilling() {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        String query = "SELECT SUM(" + DatabaseHelper.COLUMN_INVOICE_TOTAL + ") FROM " + DatabaseHelper.TABLE_INVOICES;
+        String query = "SELECT SUM(" + DatabaseHelper.COLUMN_INVOICE_TOTAL + ") FROM " +
+                DatabaseHelper.TABLE_INVOICES + " WHERE " +
+                DatabaseHelper.COLUMN_INVOICE_ESTADO + " = 'pagada'";
         Cursor cursor = db.rawQuery(query, null);
-
         double total = 0.0;
         if (cursor.moveToFirst()) {
             total = cursor.getDouble(0);
         }
-
         cursor.close();
         db.close();
         return total;
     }
+
+    public double getTotalRevenue() {
+        return getTotalBilling();
+    }
+
+    
 }

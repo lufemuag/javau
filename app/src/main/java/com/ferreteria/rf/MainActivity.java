@@ -148,19 +148,19 @@ public class MainActivity extends AppCompatActivity {
     
     private void updateDashboardStats() {
         // Total de clientes
-        int totalClientes = clientDAO.getClientCount();
+        int totalClientes = clientDAO.getTotalClients();
         tvTotalClientes.setText(String.valueOf(totalClientes));
         
         // Total de productos
-        int totalProductos = productDAO.getProductCount();
+        int totalProductos = productDAO.getTotalProducts();
         tvTotalProductos.setText(String.valueOf(totalProductos));
         
         // Pedidos activos (pendientes)
-        int pedidosActivos = orderDAO.getActiveOrdersCount();
+        int pedidosActivos = orderDAO.getActiveOrders();
         tvPedidosActivos.setText(String.valueOf(pedidosActivos));
         
         // Facturación total
-        double facturacionTotal = invoiceDAO.getTotalRevenue();
+        double facturacionTotal = invoiceDAO.getTotalBilling();
         tvFacturacionTotal.setText(String.format("$%.2f", facturacionTotal));
     }
 }
