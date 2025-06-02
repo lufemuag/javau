@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,7 +17,7 @@
             android:id="@+id/tv_codigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Código: O001"
+            android:text="Código: ORD001"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -27,15 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Descripción: Pedido de tornillos"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/tv_fecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Fecha: 01/01/2024"
+            android:text="Descripción del pedido"
             android:textSize="14sp" />
 
         <TextView
@@ -43,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Cantidad: 100"
+            android:text="Cantidad: 10"
             android:textSize="14sp" />
 
         <TextView
@@ -59,8 +50,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Producto: Tornillo 1/4"
+            android:text="Producto: Tornillos"
             android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Estado: Pendiente"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_orange_dark" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="8dp"
                 android:text="Editar"
                 android:textSize="12sp" />
 
@@ -82,85 +82,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="4dp"
                 android:text="Eliminar"
                 android:textSize="12sp"
-                android:backgroundTint="@android:color/holo_red_light" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/tv_codigo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Código"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tv_descripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Descripción"
-            android:layout_marginTop="4dp" />
-
-        <TextView
-            android:id="@+id/tv_total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Total"
-            android:layout_marginTop="4dp" />
-
-        <TextView
-            android:id="@+id/tv_cliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cliente"
-            android:layout_marginTop="4dp" />
-
-        <TextView
-            android:id="@+id/tv_estado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estado"
-            android:layout_marginTop="4dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
-
-            <Button
-                android:id="@+id/btn_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Editar"
-                android:layout_marginEnd="8dp" />
-
-            <Button
-                android:id="@+id/btn_delete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Eliminar" />
+                android:backgroundTint="@android:color/holo_red_dark" />
 
         </LinearLayout>
 
