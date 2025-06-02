@@ -41,4 +41,8 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "./gradlew clean build"
+args = "chmod +x gradlew"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./gradlew clean assembleDebug"
