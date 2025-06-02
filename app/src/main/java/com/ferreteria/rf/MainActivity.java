@@ -95,6 +95,58 @@ public class MainActivity extends AppCompatActivity {
     }
     
     private void updateDashboardStats() {
+        // Update client count
+        int totalClientes = clientDAO.getTotalClients();
+        tvTotalClientes.setText(String.valueOf(totalClientes));
+        
+        // Update product count
+        int totalProductos = productDAO.getTotalProducts();
+        tvTotalProductos.setText(String.valueOf(totalProductos));
+        
+        // Update active orders count
+        int pedidosActivos = orderDAO.getActiveOrders();
+        tvPedidosActivos.setText(String.valueOf(pedidosActivos));
+        
+        // Update total billing
+        double facturacionTotal = invoiceDAO.getTotalBilling();
+        tvFacturacionTotal.setText(String.format("$%.2f", facturacionTotal));
+    }
+    
+    private void setupClickListeners() {
+        cardClientes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ClientActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        cardProductos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ProductActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        cardPedidos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        cardFacturas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InvoiceActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    
+    private void updateDashboardStats() {
         // Total de clientes
         int totalClientes = clientDAO.getClientCount();
         tvTotalClientes.setText(String.valueOf(totalClientes));
