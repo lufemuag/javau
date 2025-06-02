@@ -38,7 +38,56 @@ public class ClientActivity extends AppCompatActivity {
     
     private void loadClients() {
         List<Client> clients = clientDAO.getAllClients();
+        adapter.setClients(clients);
         Toast.makeText(this, "Clientes cargados: " + clients.size(), Toast.LENGTH_SHORT).show();
+    }
+    
+    private void setupSearchView() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+            
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (newText.isEmpty()) {
+                    loadClients();
+                } else {
+                    List<Client> filteredClients = clientDAO.searchClients(newText);
+                    adapter.setClients(filteredClients);
+                }
+                return true;
+            }
+        });
+    }
+    
+    @Override
+    public void onClientClick(Client client) {
+        Intent intent = new Intent(this, AddEditClientActivity.class);
+        intent.putExtra("CLIENT_ID", client.getId());
+        intent.putExtra("CLIENT_CEDULA", client.getCedula());
+        intent.putExtra("CLIENT_NOMBRE", client.getNombre());
+        intent.putExtra("CLIENT_DIRECCION", client.getDireccion());
+        intent.putExtra("CLIENT_TELEFONO", client.getTelefono());
+        startActivity(intent);
+    }
+    
+    @Override
+    public void onClientDelete(Client client) {
+        int result = clientDAO.deleteClient(client.getId());
+        if (result > 0) {
+            Toast.makeText(this, "Cliente eliminado correctamente", Toast.LENGTH_SHORT).show();
+            loadClients();
+        } else {
+            Toast.makeText(this, "Error al eliminar cliente", Toast.LENGTH_SHORT).show();
+        }
+    }
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadClients(); // Recargar cuando se regrese de AddEdit
     }
     
     @Override

@@ -93,6 +93,9 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.ClientView
                     .setNegativeButton("Cancelar", null)
                     .show();
             });
+        }
+    }
+            });
             
             itemView.setOnClickListener(v -> {
                 if (listener != null) {
