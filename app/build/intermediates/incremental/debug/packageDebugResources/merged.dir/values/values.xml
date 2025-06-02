@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="background_gray">#F5F5F5</color>
+    <color name="black">#FF000000</color>
+    <color name="primary_blue">#1976D2</color>
+    <color name="primary_green">#2E7D32</color>
+    <color name="primary_orange">#F57C00</color>
+    <color name="primary_purple">#7B1FA2</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="text_primary">#424242</color>
+    <color name="text_secondary">#666666</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Ferretería RF</string>
+    <string name="clientes">Clientes</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="facturacion_total">Facturación Total</string>
+    <string name="facturas">Facturas</string>
+    <string name="gestion_clientes">Gestión de Clientes</string>
+    <string name="gestion_facturas">Gestión de Facturas</string>
+    <string name="gestion_pedidos">Gestión de Pedidos</string>
+    <string name="gestion_productos">Gestión de Productos</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="pedidos_activos">Pedidos Activos</string>
+    <string name="productos">Productos</string>
+    <string name="total_clientes">Total Clientes</string>
+    <string name="total_productos">Total Productos</string>
+    <style name="Theme.FerreteriaRF" parent="Theme.Material3.DayNight">
+        
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorPrimaryVariant">@color/primary_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorSecondaryVariant">@color/primary_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>

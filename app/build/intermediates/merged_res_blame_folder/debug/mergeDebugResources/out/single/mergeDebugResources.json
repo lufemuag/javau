@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_main.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/xml_backup_rules.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_item_product.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/item_product.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/drawable_gradient_orange.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/drawable/gradient_orange.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_invoice.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_invoice.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_item_client.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/item_client.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_item_order.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/item_order.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/drawable_circle_white.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/drawable/circle_white.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_order.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_order.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_product.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_product.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_add_edit_invoice.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_add_edit_invoice.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_add_edit_client.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_add_edit_client.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/drawable_gradient_green.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/drawable/gradient_green.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_add_edit_product.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_add_edit_product.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_add_edit_order.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_add_edit_order.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_item_invoice.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/item_invoice.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.ferreteria.rf.app-main-34:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/layout_activity_client.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/layout/activity_client.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/drawable_gradient_purple.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/drawable/gradient_purple.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/drawable_gradient_blue.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/drawable/gradient_blue.xml"
+    },
+    {
+        "merged": "com.ferreteria.rf.app-debug-32:/xml_data_extraction_rules.xml.flat",
+        "source": "com.ferreteria.rf.app-main-34:/xml/data_extraction_rules.xml"
+    }
+]
