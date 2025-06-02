@@ -1,0 +1,23 @@
+:app:mergeDebugResources
+:app:parseDebugLocalResources
+:app:mergeExtDexDebug
+org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.res.ParseLibraryResourcesTask$ParseResourcesRunnable
+com.android.ide.common.symbols.ResourceDirectoryParseException: Failed to parse XML file 'C:\Users\kirit\Downloads\java3\javau\javau\app\build\intermediates\packaged_res\debug\packageDebugResources\layout\activity_add_edit_client.xml'
+activity_add_edit_client.xml
+org.gradle.api.internal.tasks.execution.TaskExecution$MultipleTaskActionFailures: Multiple task action failures occurred:
+com.android.aaptcompiler.ResourceCompilationException: Resource compilation failed (Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_order.xml: . Cause: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_order.xml:
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Resource compilation failed (Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_client.xml: . Cause: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_client.xml:
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Resource compilation failed (Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_invoice.xml: . Cause: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_invoice.xml:
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Resource compilation failed (Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_product.xml: . Cause: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\item_product.xml:
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Resource compilation failed (Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\activity_add_edit_invoice.xml: . Cause: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+com.android.aaptcompiler.ResourceCompilationException: Failed to compile resource file: C:\Users\kirit\Downloads\java3\javau\javau\app\src\main\res\layout\activity_add_edit_invoice.xml:
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[2,6]
+El destino de la instrucción de procesamiento que coincide con "[xX][mM][lL]" no está permitido
