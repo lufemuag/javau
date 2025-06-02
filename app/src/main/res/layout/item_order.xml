@@ -18,56 +18,49 @@
             android:id="@+id/tv_codigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Código del pedido"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:text="Código: O001"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Descripción del pedido"
-            android:textSize="14sp"
-            android:textColor="@color/black" />
+            android:text="Descripción: Pedido de tornillos"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Fecha: 01/01/2024"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_cantidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Cantidad: 0"
-            android:textSize="14sp"
-            android:textColor="@color/black" />
+            android:text="Cantidad: 100"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_cliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Cliente: "
-            android:textSize="14sp"
-            android:textColor="@color/black" />
+            android:text="Cliente: Juan Pérez"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_producto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Producto: "
-            android:textSize="14sp"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/tv_estado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Estado: pendiente"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/holo_orange_dark" />
+            android:text="Producto: Tornillo 1/4"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,7 +75,7 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="4dp"
                 android:text="Editar"
-                android:backgroundTint="@android:color/holo_blue_light" />
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_delete"
@@ -91,6 +84,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="4dp"
                 android:text="Eliminar"
+                android:textSize="12sp"
                 android:backgroundTint="@android:color/holo_red_light" />
 
         </LinearLayout>
